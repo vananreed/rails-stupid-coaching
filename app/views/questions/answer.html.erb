@@ -1,0 +1,17 @@
+<div class="you">
+  <p><%=  @question %></p>
+  <p>-You</p>
+</div>
+<div class="coach">
+  <% if @question.downcase == "i am going to work" %>
+    <p>Great!</p>
+  <% elsif @question.end_with? "?" %>
+    <p>Silly question, get dressed and go to work!</p>
+  <% else %>
+    <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+  <p>-Your coach</p>
+</div>
+<%= link_to "Say something else", ask_path %>
+
+
